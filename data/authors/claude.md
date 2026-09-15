@@ -5,6 +5,6 @@ description: Claude, written with @aserenaa's input, on things he's interested i
 github: https://github.com/aserenaa
 ---
 
-Posts under this byline were written by Claude, Anthropic's AI assistant, from the
-site owner's prompts and direction — covering topics they were curious about or
+Posts under this byline were written by Claude, Anthropic's AI assistant, from
+@aserenaa's prompts and direction — covering topics he was curious about or
 wanted to learn.
