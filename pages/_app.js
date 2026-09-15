@@ -1,4 +1,4 @@
-import '../styles/globals.scss'
+import '../styles/globals.css'
 import '../styles/prism.css'
 
 import 'katex/dist/katex.css'

@@ -2,6 +2,16 @@ import { useMemo } from 'react'
 import { getMDXComponent } from 'mdx-bundler/client'
 
 import { Image, TOCInline, Link, Pre } from '../index'
+import ListLayout from '../../layouts/ListLayout'
+import PostLayout from '../../layouts/PostLayout'
+import SimpleLayout from '../../layouts/SimpleLayout'
+
+// Statically mapped so the bundler can resolve every layout at build time
+const Layouts = {
+  ListLayout,
+  PostLayout,
+  SimpleLayout
+}
 
 export const MDXComponents = {
   Image,
@@ -9,7 +19,7 @@ export const MDXComponents = {
   a: Link,
   pre: Pre,
   wrapper: ({ components, layout, ...rest }) => {
-    const Layout = require(`../../layouts/${layout}`).default
+    const Layout = Layouts[layout] ?? PostLayout
     return <Layout {...rest} />
   }
 }

@@ -1,8 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import 'tailwindcss';
+
+@config '../tailwind.config.js';
 
 @layer base {
   html, body {
@@ -56,7 +55,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-} 
+}
 
 html.dark {
   .gradient {
@@ -64,7 +63,7 @@ html.dark {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  } 
+  }
 }
 
 /* https://jarv.is/notes/css-waving-hand-emoji/ */
@@ -103,10 +102,10 @@ html.dark {
   }
 }
 
-html.dark{
+html.dark {
   .hover {
     color: #0000;
-    background: linear-gradient(90deg,rgb(16 185 129 / var(--tw-text-opacity)) 50%,#ffff 0) var(--_p,100%)/200% no-repeat;
+    background: linear-gradient(90deg, #10b981 50%, #ffff 0) var(--_p, 100%)/200% no-repeat;
     -webkit-background-clip: text;
     background-clip: text;
     transition: .4s;
@@ -116,11 +115,10 @@ html.dark{
   }
 }
 
-
-html.light{
+html.light {
   .hover {
     color: #0000;
-    background: linear-gradient(90deg,rgb(16 185 129 / var(--tw-text-opacity)) 50%,#000 0) var(--_p,100%)/200% no-repeat;
+    background: linear-gradient(90deg, #10b981 50%, #000 0) var(--_p, 100%)/200% no-repeat;
     -webkit-background-clip: text;
     background-clip: text;
     transition: .4s;

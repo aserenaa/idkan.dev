@@ -4,6 +4,8 @@ import { siteMetadata } from '../../data/siteMetadata'
 
 const CommonSEO = ({ title, description, ogType, ogImage, twImage, canonicalUrl }) => {
   const router = useRouter()
+  // ogImage may be a single URL or a list of them
+  const ogImages = (Array.isArray(ogImage) ? ogImage : [ogImage]).filter(Boolean)
   return (
     <Head>
       <title>{title}</title>
@@ -13,13 +15,13 @@ const CommonSEO = ({ title, description, ogType, ogImage, twImage, canonicalUrl 
       <meta property='og:description' content={description} />
       <meta property='og:type' content={ogType} />
       <meta property='og:site_name' content={siteMetadata.title} />
-      <meta property='og:image' content={ogImage} />
+      {ogImages.map((img) => (
+        <meta key={img} property='og:image' content={img} />
+      ))}
       <meta property='og:image:width' content='1200' />
       <meta property='og:image:height' content='630' />
       <meta property='og:image:alt' content={description} />
       <meta property='og:image:type' content='image/png' />
-      <meta property='og:image:secure_url' content={ogImage} />
-      <meta property='og:image:url' content={ogImage} />
       <meta property='og:url' content={`${siteMetadata.siteUrl}${router.asPath}`} />
       <meta property='og:site_name' content={siteMetadata.title} />
       <meta name='twitter:card' content='summary_large_image' />
@@ -35,8 +37,8 @@ const CommonSEO = ({ title, description, ogType, ogImage, twImage, canonicalUrl 
 }
 
 export const PageSEO = ({ title, description }) => {
-  const ogImageUrl = `${siteMetadata.siteUrl}/social-media-banner.png`
-  const twImageUrl = `${siteMetadata.siteUrl}/social-media-banner.png`
+  const ogImageUrl = `${siteMetadata.siteUrl}${siteMetadata.socialMediaBanner}`
+  const twImageUrl = `${siteMetadata.siteUrl}${siteMetadata.socialMediaBanner}`
 
   return (
     <CommonSEO
@@ -50,8 +52,8 @@ export const PageSEO = ({ title, description }) => {
 }
 
 export const TagSEO = ({ title, description }) => {
-  const ogImageUrl = `${siteMetadata.siteUrl}/social-media-banner.png`
-  const twImageUrl = `${siteMetadata.siteUrl}/social-media-banner.png`
+  const ogImageUrl = `${siteMetadata.siteUrl}${siteMetadata.socialMediaBanner}`
+  const twImageUrl = `${siteMetadata.siteUrl}${siteMetadata.socialMediaBanner}`
   const router = useRouter()
 
   return (
@@ -135,7 +137,7 @@ export const BlogSEO = ({ authorDetails, title, summary, date, lastModified, url
         title={title}
         description={summary}
         ogType='article'
-        ogImage={featuredImages}
+        ogImage={featuredImages.map((img) => img.url)}
         twImage={twImageUrl}
         canonicalUrl={canonicalUrl || `${siteMetadata.siteUrl}${router.asPath}`}
       />

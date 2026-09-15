@@ -21,7 +21,7 @@ const Footer = () => {
           <div>{`Have a nice ${getCurrentDayName()}!`}</div>
         </div>
         <div className='mb-8 text-sm text-gray-500 dark:text-gray-400'>
-          <Image src='/static/images/shiba.gif' alt={siteMetadata.title} height='24' width='24' className='w-8 h-8 rounded-full mr-4' />
+          <Image src='/static/images/shiba.gif' alt={siteMetadata.title} height={24} width={24} className='w-8 h-8 rounded-full mr-4' />
         </div>
       </div>
     </footer>

@@ -13,8 +13,8 @@ const Pagination = ({ totalPages, currentPage }) => {
           </button>
         )}
         {prevPage && (
-          <Link href={currentPage - 1 === 1 ? '/blog/' : `/blog/page/${currentPage - 1}`}>
-            <button rel='previous' className='cursor-pointer'>Previous</button>
+          <Link rel='previous' className='cursor-pointer' href={currentPage - 1 === 1 ? '/blog/' : `/blog/page/${currentPage - 1}`}>
+            Previous
           </Link>
         )}
         <span>{currentPage} of {totalPages} </span>
@@ -24,8 +24,8 @@ const Pagination = ({ totalPages, currentPage }) => {
           </button>
         )}
         {nextPage && (
-          <Link href={`/blog/page/${currentPage + 1}`}>
-            <button rel='next' className='cursor-pointer'>Next</button>
+          <Link rel='next' className='cursor-pointer' href={`/blog/page/${currentPage + 1}`}>
+            Next
           </Link>
         )}
       </nav>

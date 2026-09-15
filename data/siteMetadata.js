@@ -12,7 +12,7 @@ export const siteMetadata = {
   siteUrl: 'https://example.com',
   siteRepo: 'https://github.com/aserenaa/idkan.dev',
   siteLogo: '/static/images/logo.png',
-  socialMediaBanner: 'https://example.com/social-media-banner.png',
+  socialMediaBanner: '/social-media-banner.png',
   twitterHandle: '@username',
   socialMedia: [
     {

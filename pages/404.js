@@ -1,4 +1,3 @@
-
 import { PageSEO } from '../components/analytics/SEO'
 import { siteMetadata } from '../data/siteMetadata'
 import { Link, Image } from '../components'
@@ -10,7 +9,7 @@ export default function FourZeroFour () {
       <div className='flex flex-col items-start justify-start md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6'>
         <div className='space-x-2 pt-6 pb-8 md:space-y-5'>
           <h1 className='text-6xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 md:border-r-2 md:px-6 md:text-8xl md:leading-14'>
-            <Image src='/static/images/404-not-found.webp' alt='Page not found' height='450' width='450' className='mr-4' />
+            <Image src='/static/images/404-not-found.webp' alt='Page not found' height={450} width={450} className='mr-4' />
           </h1>
         </div>
         <div className='max-w-md'>

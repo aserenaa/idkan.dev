@@ -5,11 +5,7 @@ const CustomLink = ({ href, ...rest }) => {
   const isAnchorLink = href && href.startsWith('#')
 
   if (isInternalLink) {
-    return (
-      <Link href={href}>
-        <a {...rest} />
-      </Link>
-    )
+    return <Link href={href} {...rest} />
   }
 
   if (isAnchorLink) {

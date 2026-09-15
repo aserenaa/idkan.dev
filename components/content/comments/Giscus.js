@@ -53,7 +53,7 @@ const Giscus = () => {
         <button onClick={loadComments}>
           <div className='mb-8 text-sm text-gray-500 dark:text-gray-400 flex items-center gap-4 hover:underline'>
             Load Comments?
-            <Image src='/static/images/Comments.gif' alt={siteMetadata.title} height='24' width='24' className='w-8 h-8 rounded-full ml-4' />
+            <Image src='/static/images/Comments.gif' alt={siteMetadata.title} height={24} width={24} className='w-8 h-8 rounded-full ml-4' />
           </div>
         </button>
       )}
