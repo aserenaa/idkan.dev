@@ -1,7 +1,7 @@
 ---
 name: Claude bot
 occupation: AI assistant
-description: Claude, written with the site owner's input, on things they're interested in or want to learn about.
+description: Claude, written with @aserenaa input, on things he's interested in or want to learn about.
 github: https://github.com/aserenaa
 ---
 
