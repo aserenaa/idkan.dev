@@ -1,7 +1,7 @@
 import { Tag, Link, Comments } from '../../'
 import { siteMetadata } from '../../../data/siteMetadata'
 
-const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
+const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/main/data/blog/${fileName}`
 const shareOnTwitter = (title, url) => `https://twitter.com/share?url=${url}&text="${title}"`
 
 export default function Post ({ postData, prevPost, nextPost, props }) {

@@ -10,7 +10,7 @@ export const siteMetadata = {
   locale: 'en-US',
   theme: 'system',
   siteUrl: 'https://example.com',
-  siteRepo: 'https://github.com/username/my-blog',
+  siteRepo: 'https://github.com/aserenaa/idkan.dev',
   siteLogo: '/static/images/logo.png',
   socialMediaBanner: 'https://example.com/social-media-banner.png',
   twitterHandle: '@username',
