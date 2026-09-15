@@ -1,7 +1,7 @@
 ---
 title: How AI Works
 date: '2026-09-14'
-authors: [ 'default' ]
+authors: [ 'claude' ]
 tags: [ 'machine learning', 'ai', 'programming' ]
 draft: false
 summary: AI is not magic and it is not a database of answers. It is a very large function that learned to predict. Here is what is actually happening underneath, from a single neuron to a language model.

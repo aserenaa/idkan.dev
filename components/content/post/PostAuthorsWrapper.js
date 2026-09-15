@@ -17,14 +17,27 @@ export default function PostAuthors ({ authorDetails }) {
                   className='h-10 w-10 rounded-full'
                 />
               )}
-              <dl className='whitespace-nowrap text-sm font-medium leading-5'>
+              <dl className='text-sm font-medium leading-5'>
                 <dt className='sr-only'>Name</dt>
                 <dd className='text-gray-900 dark:text-gray-100'>{author.name}</dd>
-                <dt className='sr-only'>Twitter</dt>
-                <dd>
+                {author.description && (
+                  <>
+                    <dt className='sr-only'>About</dt>
+                    <dd className='mt-1 font-normal text-gray-500 dark:text-gray-400'>
+                      {author.description}
+                    </dd>
+                  </>
+                )}
+                <dt className='sr-only'>Profile</dt>
+                <dd className='mt-1 flex gap-3 whitespace-nowrap'>
                   {author.twitter && (
                     <Link href={author.twitter} className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'>
                       {author.twitter.replace('https://twitter.com/', '@')}
+                    </Link>
+                  )}
+                  {author.github && (
+                    <Link href={author.github} className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'>
+                      {author.github.replace('https://github.com/', '@')}
                     </Link>
                   )}
                 </dd>
